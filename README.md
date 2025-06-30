@@ -64,5 +64,5 @@ This project helped me understand how to:
 
 Take a look at these couple examples that I have in my own portfolio:
 
-**Beautello-Salon:** https://github.com/Mooddex/Beautello-Salon 
+**Beautello-Salon:** https://github.com/Mooddex/Beautello-Salon <br>
 **Timeline Page:** https://github.com/Mooddex/timeline-page
