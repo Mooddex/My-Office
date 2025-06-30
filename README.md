@@ -5,7 +5,8 @@ A simple and clean Front-end website  for lawyers to manage their cases and clie
 
 **Link to project:** https://myoffice316.netlify.app/
 
-![My Office Screenshot](https://res.cloudinary.com/deq0w5tnr/image/upload/v1751286822/2025-06-30-152314-my-office-screenclip_gu1atx.png)
+[![My Office Screenshot](https://res.cloudinary.com/deq0w5tnr/image/upload/v1751296160/2025-06-30-180817-my-office-screenclip_p7gwfc.png)](https://myoffice316.netlify.app/)
+
 
 ---
 
