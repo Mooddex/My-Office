@@ -3,7 +3,7 @@
 
 A simple and clean web application for lawyers to manage their cases and clients — all in one place. This is your online office to stay organized and focused on your legal practice.
 
-**Link to project:** http://localhost:3000/
+**Link to project:** https://myoffice316.netlify.app/
 
 ![My Office Screenshot](https://res.cloudinary.com/deq0w5tnr/image/upload/v1751286822/2025-06-30-152314-my-office-screenclip_gu1atx.png)
 
