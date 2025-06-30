@@ -28,7 +28,7 @@ const Navbar = () => {
                 src={logo}
                 alt="My Office"
               />
-              <span className={styles.logoText}>Law Office</span>
+              <span className={styles.logoText}>My Office</span>
             </NavLink>
 
             <div className="md:ml-auto">
