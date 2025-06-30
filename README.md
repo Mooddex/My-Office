@@ -1,7 +1,7 @@
 
 # My Office
 
-A simple and clean web application for lawyers to manage their cases and clients — all in one place. This is your online office to stay organized and focused on your legal practice.
+A simple and clean Front-end website  for lawyers to manage their cases and clients — all in one place. This is your online office to stay organized and focused on your legal practice.
 
 **Link to project:** https://myoffice316.netlify.app/
 
