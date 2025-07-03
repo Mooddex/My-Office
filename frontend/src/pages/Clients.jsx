@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ClientCard from "../components/ClientCard"; // adjust path as needed
+import ClientCard from "../components/ClientCard"; 
 
 const Clients = () => {
   const [clients, setClients] = useState([]);
@@ -31,7 +31,7 @@ const Clients = () => {
                 name={client.name}
                 email={client.email}
                 phone={client.phone}
-                notes={client.description} // assuming "description" is the issue
+                notes={client.description} 
               />
             ))
           ) : (
