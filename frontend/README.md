@@ -12,7 +12,7 @@ A simple and clean Front-end website  for lawyers to manage their cases and clie
 
 ## How It's Made:
 
-**Tech used:** REACT, Vite, TailwindCSS, React Router DOM
+**Tech used:** REACT, Vite, TailwindCSS, DaisyUI
 
 This project was built using modern front-end tools to ensure high performance, fast development, and a responsive design. I structured the app using React components and handled routing with `react-router-dom`. TailwindCSS was used for styling, which allowed for rapid UI development with utility classes.
 
