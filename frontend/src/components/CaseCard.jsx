@@ -1,4 +1,4 @@
-const CaseCard = ({ title, client, type, status, notes }) => {
+const CaseCard = ({ title, client, type, status, description }) => {
   return (
     <div className="bg-white border border-purple-200 rounded-lg shadow p-6">
       <h3 className="text-xl font-semibold text-purple-800 mb-2">
@@ -13,9 +13,9 @@ const CaseCard = ({ title, client, type, status, notes }) => {
       <p className="text-purple-700 mb-1">
          Status: <span className="font-medium">{status}</span>
       </p>
-      {notes && (
+      {description && (
         <p className="text-sm text-purple-600 mt-2 italic">
-          {notes}
+          {description}
         </p>
       )}
     </div>

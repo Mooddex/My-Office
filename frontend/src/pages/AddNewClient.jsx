@@ -15,17 +15,26 @@ const AddNewClient = ({ addClient }) => {
     const [phone, setPhone]= useState('');
     const [description, setDescription]= useState('');
     const [email, setEmail]= useState('');
+    const [caseName, setCaseName] = useState('');
+    const [caseStatus, setCaseStatus] = useState('');
+
     const navigate=useNavigate();
     
 
     const submitForm = (e)=>{
       e.preventDefault();
-      const newClient ={
+      const newClient = {
         name,
         phone,
         description,
         email,
+        case: {
+          caseName,
+          caseStatus,
+          description
+        }
       };
+
       addClient(newClient);
       toast.success('added successfly')
       
@@ -111,6 +120,39 @@ const AddNewClient = ({ addClient }) => {
                   onChange={(e)=>setEmail(e.target.value)}
                 ></input>
             </div>
+                        {/* Case Name */}
+            <div className="mb-4">
+              <label htmlFor="caseName" className={styles.label}>Case Name</label>
+              <input
+                type="text"
+                id="caseName"
+                name="caseName"
+                className={styles.inputText}
+                placeholder="Divorce / Contract / etc."
+                required
+                value={caseName}
+                onChange={(e) => setCaseName(e.target.value)}
+              />
+            </div>
+
+            {/* Case Status */}
+            <div className="mb-4">
+              <label htmlFor="caseStatus" className={styles.label}>Case Status</label>
+              <select
+                id="caseStatus"
+                name="caseStatus"
+                className={styles.inputText}
+                required
+                value={caseStatus}
+                onChange={(e) => setCaseStatus(e.target.value)}
+              >
+                <option value="">Select status</option>
+                <option value="Open">Open</option>
+                <option value="Pending">Pending</option>
+                <option value="Closed">Closed</option>
+              </select>
+            </div>
+
             <div>
               <button
                 className={styles.button}
