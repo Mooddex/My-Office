@@ -4,7 +4,7 @@ A clean and organized **full-stack web app** built for lawyers to manage their *
 
 🔗 **Live Link:** [https://myoffice316.netlify.app](https://myoffice316.netlify.app)
 
-[![My Office Screenshot](https://res.cloudinary.com/deq0w5tnr/image/upload/v1751296160/2025-06-30-180817-my-office-screenclip_p7gwfc.png)](https://myoffice316.netlify.app/)
+[![My Office Screenshot](https://res.cloudinary.com/deq0w5tnr/image/upload/v1751988231/2025-06-30-180817-my-office-screenclip_p7gwfc.png)](https://myoffice316.netlify.app/)
 
 ---
 
