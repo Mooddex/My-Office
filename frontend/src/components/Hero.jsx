@@ -12,9 +12,8 @@ const Hero = () => {
       <div className={styles.container}>
         <h1 className={styles.heading}>Welcome to The Office</h1>
         <p className={styles.paragraph}>
-          This is now your online office — manage clients, track cases, and stay organized with ease.
+          This is now your online office <br /> manage clients, track cases, and stay organized with ease.
         </p>
-        <a href="/clients" className={styles.button}>Get Started</a>
       </div>
     </section>
   );

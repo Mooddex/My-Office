@@ -1,7 +1,5 @@
-
-
-
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const styles = {
   section: "py-4 bg-white",
@@ -14,13 +12,36 @@ const styles = {
 };
 
 const Card = () => {
+  const [clientCount, setClientCount] = useState(0);
+  const [caseCount, setCaseCount] = useState(0);
+
+  useEffect(() => {
+  const fetchClients = async () => {
+    try {
+      const res = await fetch("/api/clients", {
+        credentials: "include"
+      });
+      const data = await res.json();
+
+      setClientCount(data.length);
+      const totalCases = data.filter(client => client.caseName?.trim() !== "").length;
+      setCaseCount(totalCases);
+    } catch (err) {
+      console.error("Error fetching clients", err);
+    }
+  };
+
+  fetchClients();
+}, []);
+
+
   return (
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.grid}>
           {/* Cases Card */}
           <div className={styles.card}>
-            <h2 className={styles.heading}>Cases</h2>
+            <h2 className={styles.heading}>Cases: {caseCount}</h2>
             <p className={styles.paragraph}>
               View and manage your current cases.
             </p>
@@ -31,9 +52,9 @@ const Card = () => {
 
           {/* Clients Card */}
           <div className={styles.card}>
-            <h2 className={styles.heading}>Clients</h2>
+            <h2 className={styles.heading}>Clients: {clientCount}</h2>
             <p className={styles.paragraph}>
-              Add  your clients .
+              Add your clients.
             </p>
             <Link to="/add-client" className={styles.button}>
               Add New Client
