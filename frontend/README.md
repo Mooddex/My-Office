@@ -1,69 +1,126 @@
+# My Office – Full Stack App for Lawyers
 
-# My Office
+A clean and organized **full-stack web app** built for lawyers to manage their **cases** and **clients** in one centralized place. Secure login, client management, and case tracking — this is your virtual law office.
 
-A simple and clean Front-end website  for lawyers to manage their cases and clients — all in one place. This is your online office to stay organized and focused on your legal practice.
-
-**Link to project:** https://myoffice316.netlify.app/
+🔗 **Live Link:** [https://myoffice316.netlify.app](https://myoffice316.netlify.app)
 
 [![My Office Screenshot](https://res.cloudinary.com/deq0w5tnr/image/upload/v1751296160/2025-06-30-180817-my-office-screenclip_p7gwfc.png)](https://myoffice316.netlify.app/)
 
+---
+
+## 🚀 Tech Stack
+
+**Front-end:**
+- React
+- Vite
+- TailwindCSS
+- React Router DOM
+- React Toastify
+
+**Back-end:**
+- Node.js
+- Express.js
+- MongoDB + Mongoose
+- Passport.js (Local Strategy)
+- express-session & connect-mongo
 
 ---
 
-## How It's Made:
+## 📁 Features
 
-**Tech used:** REACT, Vite, TailwindCSS, React Router DOM
-
-This project was built using modern front-end tools to ensure high performance, fast development, and a responsive design. I structured the app using React components and handled routing with `react-router-dom`. TailwindCSS was used for styling, which allowed for rapid UI development with utility classes.
-
-The layout is divided into three main sections:  
-- A **home page** to welcome users and direct them to cases or clients.  
-- A **cases page** to view and manage current legal cases.  
-- A **clients page** to view and add new clients.
-
-The site is fully **responsive**, ensuring it works great on both desktop and mobile devices.
+✅ **User Authentication** (Register, Login, Logout)  
+✅ **Client Management** (Add, View by logged-in user)  
+✅ **Case Tracking** (Integrated within each client)  
+✅ **Session-based Login** (with Passport.js)  
+✅ **Responsive UI**  
+✅ **MongoDB Integration** with user isolation (each user sees only their clients/cases)
 
 ---
 
-## Usage
+## 📦 Installation
+
+### 1. Clone the repo
 
 ```bash
+git clone https://github.com/YourUsername/my-office
+cd my-office
+```
+
+### 2. Set up the server
+
+```bash
+cd backend
+npm install
+```
+
+Create a `.env` file:
+
+```
+MONGO_URI=your_mongodb_connection_string
+SESSION_SECRET=your_secret
+```
+
+Start the server:
+
+```bash
+node server.js
+```
+
+### 3. Set up the client
+
+```bash
+cd ../frontend
 npm install
 npm run dev
 ```
 
-Then open your browser at:
+Open your browser at:
 
 ```
-http://localhost:3000/
+http://localhost:3000
 ```
 
 ---
 
-## Optimizations
+## 🔒 Authentication & Session Handling
 
-In the future, I plan to:
-
-- Connect the app to a real database like MongoDB or Firebase.
-- Add validation to forms.
-- Use context or Redux for better state management.
+- User sessions are stored in MongoDB via `connect-mongo`.
+- All protected routes use a `isAuthenticated` middleware.
+- Sessions are sent via cookies, and the frontend uses `credentials: include` in all fetch requests.
 
 ---
 
-## Lessons Learned:
+## 📊 Dashboard
 
-This project helped me understand how to:
-- Structure a full front-end app from scratch.
-- Use TailwindCSS efficiently for layout and design.
-- Work with `react-router-dom` to handle multiple pages.
-- Build reusable components and manage navigation dynamically.
-- Build for mobile-first and responsive layouts.
+Your home screen shows:
+- 🔢 Total number of **clients**
+- 📂 Number of **active cases**
+- 🔍 Links to manage cases or add new clients
 
 ---
 
-## Examples:
+## 🛠️ Future Improvements
 
-Take a look at these couple examples that I have in my own portfolio:
+- Add case filtering and advanced search
+- Add ability to upload legal documents
+- Add role-based access (admin/lawyer)
+- Migrate to JWT-based authentication (optional)
 
-**Beautello-Salon:** https://github.com/Mooddex/Beautello-Salon <br>
-**Timeline Page:** https://github.com/Mooddex/timeline-page
+---
+
+## 🧠 Lessons Learned
+
+- Full-stack authentication using **Passport.js**
+- Session management and security using **cookies**
+- Working with MongoDB & Mongoose models
+- Building a REST API and protecting routes
+- Sharing authentication state between client and server (CORS, cookies)
+
+---
+
+## 🎓 Similar Projects
+
+- [Beautello Salon (React UI)](https://github.com/Mooddex/Beautello-Salon)  
+- [Timeline Page](https://github.com/Mooddex/timeline-page)
+```
+
