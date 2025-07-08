@@ -1,24 +1,25 @@
 const Client = require('../models/client');
 
-const addClient = async (req, res) => {
+exports.addClient = async (req, res) => {
   try {
-    const client = new Client(req.body);
-    const savedClient = await client.save();
-    res.status(201).json(savedClient);
+    const newClient = await Client.create({
+      ...req.body,
+      user: req.user._id
+    });
+
+    console.log("✅ Client created by:", req.user.email);
+    res.status(201).json(newClient);
   } catch (err) {
-    res.status(400).json({ error: err.message });
+    console.error("❌ Error adding client:", err);
+    res.status(500).json({ message: "Failed to add client" });
   }
 };
-const getClients = async (req, res) => {
+
+exports.getClients = async (req, res) => {
   try {
-    const clients = await Client.find();
+    const clients = await Client.find({ user: req.user._id });
     res.json(clients);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 };
-
-module.exports = {
-   addClient,
-   getClients,
-   };

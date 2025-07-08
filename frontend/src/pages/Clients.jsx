@@ -7,7 +7,8 @@ const Clients = () => {
   useEffect(() => {
     const fetchClients = async () => {
       try {
-        const res = await fetch("/api/clients");
+        const res = await fetch("/api/clients",{
+        credentials: "include",});
         const data = await res.json();
         setClients(data);
       } catch (err) {

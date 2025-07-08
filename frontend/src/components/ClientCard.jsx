@@ -1,13 +1,17 @@
 const ClientCard = ({ name, email, phone, notes }) => {
   return (
-    <div className="bg-white border border-purple-200 rounded-lg shadow p-6 transition-colors duration-200">
-      <h3 className="text-xl font-semibold text-purple-800 mb-2">
+    <div className="bg-white border border-purple-200 rounded-2xl shadow-md p-6 hover:shadow-lg transition-all duration-300">
+      <h3 className="text-xl font-bold text-purple-800 mb-2">
         {name}
       </h3>
-      <p className="text-purple-700 mb-1">📧 {email}</p>
-      <p className="text-purple-700 mb-1">📞 {phone}</p>
+
+      <div className="text-sm text-purple-700 space-y-1">
+        <p><span className="font-medium">📧 Email:</span> {email}</p>
+        <p><span className="font-medium">📞 Phone:</span> {phone}</p>
+      </div>
+
       {notes && (
-        <p className="text-sm text-purple-600 mt-2 italic">
+        <p className="mt-3 text-sm text-purple-600 italic border-t pt-3">
           {notes}
         </p>
       )}

@@ -21,25 +21,44 @@ const AddNewClient = ({ addClient }) => {
     const navigate=useNavigate();
     
 
-    const submitForm = (e)=>{
-      e.preventDefault();
-      const newClient = {
-        name,
-        phone,
-        description,
-        email,
-        case: {
-          caseName,
-          caseStatus,
-          description
-        }
-      };
+    const submitForm = async (e) => {
+  e.preventDefault();
+  
+  const newClient = {
+    name,
+    phone,
+    email,
+    description,
+    case: {
+      caseName,
+      caseStatus,
+      description
+    }
+  };
 
-      addClient(newClient);
-      toast.success('added successfly')
-      
-      return navigate('/clients');
-    };
+  try {
+    const res = await fetch("http://localhost:2121/api/clients", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      credentials: "include",
+      body: JSON.stringify(newClient),
+    });
+
+    if (!res.ok) {
+      const error = await res.json();
+      throw new Error(error.message || "Failed to add client");
+    }
+    const savedClient = await res.json(); // ✅ use saved version from backend
+  addClient(savedClient);               // ✅ update local state
+
+    toast.success("Client added successfully!");
+    navigate("/clients");
+  } catch (err) {
+    console.error("Add client error:", err);
+    toast.error("Error adding client");
+  }
+};
+
 
   
   return (
