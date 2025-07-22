@@ -1,6 +1,6 @@
 
 
-# My Office – Full Stack App for Lawyers ⚖️
+# My Office
 
 A clean and organized **full-stack web app** built for lawyers to manage their **cases** and **clients** in one centralized platform. With secure login, client management, and case tracking — this is your virtual law office.
 
